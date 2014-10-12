@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+		"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<include file="struts-default.xml" />
+	<constant name="struts.locale" value="zh_CN"/>
+	<constant name="struts.i18n.encoding" value="GBK"/>
+	<package name="yy" namespace="/" extends="struts-default">
+		<action name="login" class="yy.user.UserAction">
+			<result name="success">/success.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+	<package name="org" namespace="/" extends="struts-default">
+		<action name="suc" class="org.action.BookAction">
+			<result name="s">/s.jsp</result>
+			<result name="e">/e.jsp</result>
+		</action>
+		<action name="booklist" class="org.action.BookListAction">
+			<result name="ss">/lb.jsp</result>
+		</action>
+		<action name="bookdetail" class="org.action.BookDetailAction">
+			<result name="sss">/lc.jsp</result>
+		</action>
+		<action name="bookdelete" class="org.action.BookDeleteAction">
+			<result name="success">/ld.jsp</result>
+			<result name="error">/ld2.jsp</result>
+		</action>
+		<action name="bookadd" class="org.action.BookAddAction">
+			<result name="success">/ldd.jsp</result>
+			<result name="error">/ldd2.jsp</result>
+		</action>
+	</package>
+</struts>    
